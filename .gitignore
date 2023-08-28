@@ -1,0 +1,8 @@
+# Ignorar o arquivo .env
+.env
+
+# Ignorar o arquivo env.js (se necessário)
+env.js
+
+# Ignorar a pasta node_modules
+node_modules/
