@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, SafeAreaView, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Env from './env';
+import Config from 'react-native-config';
 
-const get_tarefas_API = Env.API_URL;
+const apiUrl = Config.API_URL;
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(get_tarefas_API)
+    fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
         console.log('Dados da API:', data);
